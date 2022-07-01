@@ -125,21 +125,21 @@ Solar2D 실행 후, New Project 클릭
 			
 	- **여러개 출력해보기**
 		+ 이미지 보고 따라해보기  
-		+ 
+		
 		![Alt text](../image/week01/exam12.png)
 
-			```lua
-				local object = {}
-		
-				object[1] = display.newRect(display.contentCenterX, display.contentCenterY, 500, 500)
-				object[1]:setFillColor(1, 0, 0)
-		
-				object[2] = display.newRect(display.contentCenterX, display.contentCenterY, 300, 300)
-				object[2]:setFillColor(1, 0.5, 0)
-		
-				object[3] = display.newRect(display.contentCenterX, display.contentCenterY, 100, 100)
-				object[3]:setFillColor(1, 1, 0)
-			```
+		```lua
+			local object = {}
+	
+			object[1] = display.newRect(display.contentCenterX, display.contentCenterY, 500, 500)
+			object[1]:setFillColor(1, 0, 0)
+	
+			object[2] = display.newRect(display.contentCenterX, display.contentCenterY, 300, 300)
+			object[2]:setFillColor(1, 0.5, 0)
+	
+			object[3] = display.newRect(display.contentCenterX, display.contentCenterY, 100, 100)
+			object[3]:setFillColor(1, 1, 0)
+		```
 
 <br>
 
@@ -176,7 +176,7 @@ Solar2D 실행 후, New Project 클릭
 		```
 		
 		수정 결과  
-		
+
 		![Alt text](../image/week01/exam13.png)
 
 
