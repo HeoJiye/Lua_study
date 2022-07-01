@@ -15,6 +15,5 @@
 
 ## 📌 참고 자료
 * 🧡 [Solar2D 개발자 문서](https://docs.coronalabs.com/)
-* 
 
 ## ❓ QnA
