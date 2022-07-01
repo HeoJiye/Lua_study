@@ -5,13 +5,13 @@
 <br>
 
 ## 🏛 목차
-* [스터디 준비하기](#_2)
-* [Solar2D Documentation](#_2) ⬅ 동영상 강의는 여기부터!
-* [실습 준비](#_2)
-* [Display Object](#_2)
-* [간단 실습 따라하기](#_2)
-* [예제 게임 따라하기](#_2)
-* [이번주 과제 안내](#_2)
+* [스터디 준비하기](#-스터디-준비하기)
+* [Solar2D Documentation](#-solar2d-documentation) ⬅ 동영상 강의는 여기부터!
+* [실습 준비](#-실습-준비)
+* [Display Object](#-display-object)
+* [간단 실습 따라하기](#%EF%B8%8F%EF%B8%8F-실습-따라하기)
+* [예제 게임 따라하기](#-예제-게임-따라하기)
+* [이번주 과제 안내](#-이번주-과제-안내)
 
 <br>
 
@@ -100,11 +100,11 @@ Solar2D 실행 후, New Project 클릭
 	- object:setFillColor( **red, green, blue** )
 	- object:setFillColor( **red, green, blue, alpha** )
 * [object.alpha](https://docs.coronalabs.com/api/type/DisplayObject/alpha.html)
-
+* [object:scale()](https://docs.coronalabs.com/api/type/DisplayObject/scale.html)
 
 <br>
 
-### 🕵️‍♀️ 실습 따라하기
+### 🕵️‍♀️ 간단 실습 따라하기
 #### 1. 간단한 도형 출력해보기
 
 * **display.newRect**
