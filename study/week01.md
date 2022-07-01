@@ -124,7 +124,8 @@ Solar2D 실행 후, New Project 클릭
 			* 참고: [DisplayObject](https://docs.coronalabs.com/api/type/DisplayObject/index.html)
 			
 	- **여러개 출력해보기**
-		+ 이미지 보고 따라해보기
+		+ 이미지 보고 따라해보기  
+		+ 
 		![Alt text](../image/week01/exam12.png)
 
 			```lua
@@ -174,7 +175,8 @@ Solar2D 실행 후, New Project 클릭
 			objectGroup.y = objectGroup.y - 100
 		```
 		
-		수정 결과
+		수정 결과  
+		
 		![Alt text](../image/week01/exam13.png)
 
 
