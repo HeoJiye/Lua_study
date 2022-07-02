@@ -264,7 +264,7 @@ onFirstView()	-- invoke first tab button's onPress event manually
 			carrot[i] = display.newImageRect(carrotGroup, "image/carrot.png", 60, 150)
 			carrot[i].x, carrot[i].y = display.contentWidth*0.55 + 60*i, display.contentHeight*0.6
 
-			carrotGroup:insert(carrot[i])
+			--carrotGroup:insert(carrot[i])
 		end
 	```
 
