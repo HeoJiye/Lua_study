@@ -114,7 +114,7 @@ Solar2D 실행 후, New Project 클릭
 	- **배경화면 출력해보기**
 		+ view1.lua 13번째 줄에 다음 코드 추가
 		```lua
-			cal background = display.newRect(display.contentCenterX, display.contentCenterY, display.contentWidth, display.contentHeight)
+			local background = display.newRect(display.contentCenterX, display.contentCenterY, display.contentWidth, display.contentHeight)
 		```
 
 		+ 이리저리 변형해보기
