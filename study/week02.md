@@ -75,7 +75,7 @@
 			object[3]:addEventListener("tap", tapEventListener)
 		```
 	- 실행결과  
-		![Alt text](../image/week02/exam01.png)
+		![Alt text](../image/week02/exam01.gif)
 
 * **Quiz. 다음과 같은 경우에도 tap 이벤트가 작동할까요??**
 	- 해당 오브젝트가 투명도가 0일 때
@@ -107,7 +107,7 @@
 		```
 	
 	- 실행결과  
-	![Alt text](../image/week02/exam02.png)
+	![Alt text](../image/week02/exam02.gif)
 
 * **마우스로 오브젝트 드래그하기**
 	- 다음 코드를 추가
@@ -136,7 +136,7 @@
 	```
 
 	- 그런데 조금 이상하다?  
-		![Alt text](../image/week02/exam03.png)  
+		![Alt text](../image/week02/exam03.gif)  
 		커서 위치와 오브젝트 위치가 맞지 않음
 		+ 이유: object를 디스플레이 그룹에 넣은 채로 그룹 채로 위치 이동을 했기 때문!
 		+ 해결 방법: 오브젝트를 드래그할때 오브젝트 그룹의 좌표값을 빼주면 됩니다.
@@ -145,7 +145,8 @@
 			event.target.x = event.xStart + event.xDelta - event.target.parent.x
 			event.target.y = event.yStart + event.yDelta - event.target.parent.y
 		```
-
+		+ 수정 후  
+		![Alt text](../image/week02/exam04.gif)  
 <br>
 
 #### ⏰ timer 이벤트 사용해보기
@@ -177,7 +178,7 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 			local timeAttack = timer.performWithDelay(1000, alarm)
 		```
 		+ 실행결과   
-		![Alt text](../image/week02/exam04.png)
+		![Alt text](../image/week02/exam05.gif)
 	
 	- 10초를 세는 카운터 추가
 		```lua
@@ -190,13 +191,26 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 			local timeAttack = timer.performWithDelay(1000, counter, 10)
 		```
 		+ 실행결과  
-		![Alt text](../image/week02/exam05.png)
+		![Alt text](../image/week02/exam06.gif)
 
 <br>
 
 ### 🎮 예제 게임 따라하기
 
 #### 주사위 tap 이벤트 추가하기
+![Alt text](../image/week02/exam07.gif)  
+
+* game.lua에서 이어서 코드 추가
+	```lua
+		local function tapDice( event )
+			for i = 1, 6 do
+				dice[i].alpha = 0 
+			end
+			dice[math.random(6)].alpha = 1
+		end
+
+		diceGroup:addEventListener("tap", tapDice)
+	```
 
 <br>
 
