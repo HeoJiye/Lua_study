@@ -332,7 +332,7 @@ onFirstView()	-- invoke first tab button's onPress event manually
 <br>
 
 ### 🕒 이번주 과제 안내
-#### 제출 마감: 7/9(일) 자정
+#### 제출 마감: 7/10(월) 자정
 
 <br>
 
