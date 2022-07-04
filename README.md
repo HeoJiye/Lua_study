@@ -13,6 +13,8 @@
 	- [대화형 게임 제작 기초 (json 활용하기)](./study/week04_1.md)
 	- [물리엔진 게임 제작 기초 (physics 사용법)](./study/week04_2.md)
 
+## 🎥 [강의 영상](https://www.youtube.com/playlist?list=PLga3qWRlaoi7n1gggte-CWx3YYsGt4QkK){: target="_blank"}
+
 ## 📌 참고 자료
 * 🧡 [Solar2D 개발자 문서](https://docs.coronalabs.com/)
 * 🎮 [Lua 데모 프로젝트 모음](https://docs.coronalabs.com/guide/programming/index.html#demo-projects)
