@@ -197,7 +197,7 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 
 ### 🎮 예제 게임 따라하기
 
-#### 주사위 tap 이벤트 추가하기
+#### 🎲 주사위 tap 이벤트 추가하기
 ![Alt text](../image/week02/exam07.gif)  
 
 * game.lua에서 이어서 코드 추가
@@ -214,11 +214,204 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 
 <br>
 
-#### 당근 touch 이벤트 추가하기 feat.Drag
+#### 🥕🥕🥕 당근 touch 이벤트 추가하기 feat.Drag
+##### 일단 움직이기 하기
+![Alt text](../image/week02/exam08.gif)   
+
+* 코드 추가
+	```lua
+		local function dragCarrot( event )
+			if( event.phase == "began" ) then
+				display.getCurrentStage():setFocus( event.target )
+				event.target.isFocus = true
+				-- 드래그 시작할 때
+
+			elseif( event.phase == "moved" ) then
+
+				if ( event.target.isFocus ) then
+					-- 드래그 중일 때
+					event.target.x = event.xStart + event.xDelta
+					event.target.y = event.yStart + event.yDelta
+				end
+
+			elseif ( event.phase == "ended" or event.phase == "cancelled") then
+				display.getCurrentStage():setFocus( nil )
+				event.target.isFocus = false
+				-- 드래그 끝났을 때
+
+			end
+		end
+
+		for i = 1, 5 do
+			carrot[i]:addEventListener("touch", dragCarrot)
+		end
+	```
 
 <br>
 
-#### timer 이벤트 추가하기 feat.이벤트 리스너 제거하기
+##### 🐰 당근을 토끼에게 주면 점수 얻기
+![Alt text](../image/week02/exam09.gif)  
+
+* 코드 수정 
+	```lua
+		local function dragCarrot( event )
+			if( event.phase == "began" ) then
+				display.getCurrentStage():setFocus( event.target )
+				event.target.isFocus = true
+				-- 드래그 시작할 때
+
+			elseif( event.phase == "moved" ) then
+
+				if ( event.target.isFocus ) then
+					-- 드래그 중일 때
+					event.target.x = event.xStart + event.xDelta
+					event.target.y = event.yStart + event.yDelta
+				end
+
+			elseif ( event.phase == "ended" or event.phase == "cancelled") then
+				display.getCurrentStage():setFocus( nil )
+				event.target.isFocus = false
+				-- 드래그 끝났을 때
+				if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
+					and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+
+					display.remove(event.target) -- 당근 삭제하기
+					score.text = score.text + 1 -- 점수 올리기
+				end
+			end
+		end
+
+		for i = 1, 5 do
+			carrot[i]:addEventListener("touch", dragCarrot)
+		end
+	```
+
+<br>
+
+##### 🥕다른 곳에 당근을 두고 원래대로 돌아가기
+![Alt text](../image/week02/exam10.gif)  
+
+* 이렇게 하면 될 것 같지만..?
+	```lua
+		elseif ( event.phase == "ended" or event.phase == "cancelled") then
+			display.getCurrentStage():setFocus( nil )
+			event.target.isFocus = false
+			-- 드래그 끝났을 때
+			if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
+				and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+
+				display.remove(event.target) -- 당근 삭제하기
+				score.text = score.text + 1 -- 점수 올리기
+			else
+				-- 원래 자리로 돌아가기
+				event.target.x = event.xStart
+				event.target.y = event.yStart
+			end
+		end
+	```
+
+	![Alt text](../image/week02/exam11.gif)  
+
+	- 조금씩 오차가 생기는 것을 확인할 수 있습니다.
+	
+	- **해결방법**  
+		+ event.target에 변수를 하나 달아두어 초기 좌표를 저장해서 사용합니다.
+			* event.target.initX, event.target.initY
+
+* 코드 수정
+	```lua
+		local function dragCarrot( event )
+			if( event.phase == "began" ) then
+				display.getCurrentStage():setFocus( event.target )
+				event.target.isFocus = true
+				-- 드래그 시작할 때
+				event.target.initX = event.target.x
+				event.target.initY = event.target.y
+
+			elseif( event.phase == "moved" ) then
+
+				if ( event.target.isFocus ) then
+					-- 드래그 중일 때
+					event.target.x = event.xStart + event.xDelta
+					event.target.y = event.yStart + event.yDelta
+				end
+
+			elseif ( event.phase == "ended" or event.phase == "cancelled") then
+				display.getCurrentStage():setFocus( nil )
+				event.target.isFocus = false
+				-- 드래그 끝났을 때
+				if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
+					and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+
+					display.remove(event.target) -- 당근 삭제하기
+					score.text = score.text + 1 -- 점수 올리기
+				else
+					event.target.x = event.target.initX
+					event.target.y = event.target.initY
+				end
+			end
+		end
+
+		for i = 1, 5 do
+			carrot[i]:addEventListener("touch", dragCarrot)
+		end
+	```
+
+<br>
+
+#### ⏰ timer 이벤트 추가하기
+![Alt text](../image/week02/exam11.gif)  
+
+* **저번 시간에 까먹은 Text 하나 추가하기**
+	```lua
+		local time= display.newText(10, display.contentWidth*0.9, display.contentHeight*0.15)
+		time.size = 100
+		time:setFillColor(0)
+		time.alpha = 0.5
+
+		sceneGroup:insert(time)
+	```
+
+* **timer 추가하기**  
+
+	![Alt text](../image/week02/exam12.gif)  
+
+	![Alt text](../image/week02/exam13.gif)  
+
+	- 코드 수정 (drag 함수에 점수 올리기 다음 부분에)
+		```lua
+			if( score.text == '5') then
+				score.text = '성공!'
+				time.alpha = 0
+			end
+		```
+
+	- 코드 추가
+		```lua
+		local function counter( event )
+			time.text = time.text - 1
+	
+			if( time.text == '5' ) then
+				time:setFillColor(1, 0, 0)
+			end
+	
+			if( time.text == '-1') then
+				time.alpha = 0
+	
+				if( score.text ~= '성공!' ) then
+					score.text = '실패!'
+					bunny:rotate(90)
+					
+					for i = 1, 5 do
+						carrot[i]:removeEventListener("touch", dragCarrot)
+					end
+				end
+			end
+		end
+	
+		local timeAttack = timer.performWithDelay(1000, counter, 11)
+		```
+
 
 <br>
 
@@ -226,3 +419,19 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 #### 제출 마감: 7/17(일) 자정
 
 <br>
+
+1. **클릭하면 이동하는 tap 이벤트 만들기**  
+
+	![Alt text](../image/week02/exam14.gif)  
+	
+	- view1.lua를 변형해서 위와 같은 예제를 만들어 이벤트 리스너 함수를 제출하세요.
+	
+	- 위 이미지와 동일하지 않아도 됩니다. 대충 탭하면 움직인다면 OK
+
+	- [도전] 오브젝트가 화면 밖으로 나가지 않도록 해보기
+
+2. **머하지**
+
+<br>
+
+#### 📚 [제출 폼 링크]()
