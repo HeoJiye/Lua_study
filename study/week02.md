@@ -28,20 +28,27 @@
 * **eventListener 추가하는 방법**
 	1. **이벤트 리스너 함수를 작성한다.**
 		- **event**라는 매개변수를 통해 일어난 event 정보가 넘어온다!
-			+ Ex. event.target: 이벤트의 타겟이 누구냐, 위의 경우엔 background 
+			+ Ex. event.target: 이벤트의 타겟이 누구냐, 위의 경우엔 background  
+			
+				```lua
+				event.target.x = 100  
+				event.target.alpha = 0.5  
+				event.target:setFillColor(1, 0, 0)  
+				```
 		- 이벤트가 실행되었을때 실행될 코드를 이벤트 리스너 안에 작성해준다.
 			+ 이벤트 종류에 따라 event 객체를 이용해서 복잡하게 구현해줘야 하는 경우도 있다.
-			+ Ex. touch 이벤트
+			+ Ex. touch 이벤트  
+			
 				```lua
-					local function touchEventListener( event )
-						if( event.phase == "began" ) then
-							-- 터치를 시작함
-						elseif( event.phase == "moved" ) then
-							-- 객체를 누르고 있는 상태로 움직임(드래그)
-						elseif ( event.phase == "ended" or event.phase == "cancelled") then
-							-- 터치가 끝남
-						end
-					end
+					local function touchEventListener( event )  
+						if( event.phase == "began" ) then  
+							-- 터치를 시작함  
+						elseif( event.phase == "moved" ) then  
+							-- 객체를 누르고 있는 상태로 움직임(드래그)  
+						elseif ( event.phase == "ended" or event.phase == "cancelled") then  
+							-- 터치가 끝남  
+						end  
+					end  
 				```
 	2. **오브젝트에 이벤트 리스너 함수를 추가한다.**
 		- addEventListener 기본 포맷
