@@ -288,7 +288,7 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 
 <br>
 
-##### 🥕다른 곳에 당근을 두고 원래대로 돌아가기
+##### 🥕다른 곳에 당근을 두면 원래대로 돌아가기
 ![Alt text](../image/week02/exam10.gif)  
 
 * 이렇게 하면 될 것 같지만..?
@@ -360,7 +360,6 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 <br>
 
 #### ⏰ timer 이벤트 추가하기
-![Alt text](../image/week02/exam11.gif)  
 
 * **저번 시간에 까먹은 Text 하나 추가하기**
 	```lua
