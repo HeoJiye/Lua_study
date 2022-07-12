@@ -14,24 +14,24 @@
 
 * main.lua 살펴보기
 
-		``` lua  
-		local composer = require "composer"  -- include composer library
-		
-		local function onFirstView( event )  
-			composer.gotoScene( "view1" ) -- view1에 해당하는 장면으로 이동
-		end  
+	``` lua  
+	local composer = require "composer"  -- include composer library
 	
-		onFirstView()  
-		```
+	local function onFirstView( event )  
+		composer.gotoScene( "view1" ) -- view1에 해당하는 장면으로 이동
+	end  
+
+	onFirstView()  
+	```
 
 * scene을 생성하는 view1.lua 앞부분 살펴보기 
 
-		``` lua  
-		local composer = require( "composer" )  
-		local scene = composer.newScene()
-	
-		~ 생략  
-		```
+	``` lua  
+	local composer = require( "composer" )  
+	local scene = composer.newScene()
+
+	~ 생략  
+	```
 	
 <br>
 	
@@ -50,57 +50,57 @@
 
 	- view1.lua 뒷 부분  
 	
-			``` lua  
-			function scene:create( event )
-				local sceneGroup = self.view
+		``` lua  
+		function scene:create( event )
+			local sceneGroup = self.view
+			--
+	
+		end
+	
+		function scene:show( event )
+			local sceneGroup = self.view
+			local phase = event.phase
+			
+			if phase == "will" then
 				--
-		
-			end
-		
-			function scene:show( event )
-				local sceneGroup = self.view
-				local phase = event.phase
-				
-				if phase == "will" then
-					--
-		
-				elseif phase == "did" then
-					--
-		
-				end	
-			end
-		
-			function scene:hide( event )
-				local sceneGroup = self.view
-				local phase = event.phase
-				
-				if event.phase == "will" then
-					--
-		
-				elseif phase == "did" then
-					--
-		
-				end
-			end
-		
-			function scene:destroy( event )
-				local sceneGroup = self.view
+	
+			elseif phase == "did" then
 				--
-		
+	
+			end	
+		end
+	
+		function scene:hide( event )
+			local sceneGroup = self.view
+			local phase = event.phase
+			
+			if event.phase == "will" then
+				--
+	
+			elseif phase == "did" then
+				--
+	
 			end
-		
-			---------------------------------------------------------------------------------
-		
-			-- Listener setup
-			scene:addEventListener( "create", scene )
-			scene:addEventListener( "show", scene )
-			scene:addEventListener( "hide", scene )
-			scene:addEventListener( "destroy", scene )
-		
-			-----------------------------------------------------------------------------------------
-		
-			return scene
-			```
+		end
+	
+		function scene:destroy( event )
+			local sceneGroup = self.view
+			--
+	
+		end
+	
+		---------------------------------------------------------------------------------
+	
+		-- Listener setup
+		scene:addEventListener( "create", scene )
+		scene:addEventListener( "show", scene )
+		scene:addEventListener( "hide", scene )
+		scene:addEventListener( "destroy", scene )
+	
+		-----------------------------------------------------------------------------------------
+	
+		return scene
+		```
 	
 <br>
 	
