@@ -46,7 +46,7 @@
 	| scene:hide() |  scene이 화면에서 사라지기 직전(will) / 직후(did)|
 	| scene:destroy() | 장면이 삭제될 때 |
 
-		<img src="https://docs.coronalabs.com/images/simulator/composer-flowchart.png"  width="50%"/>
+	<img src="https://docs.coronalabs.com/images/simulator/composer-flowchart.png"  width="50%"/>
 
 	- view1.lua 뒷 부분  
 	
