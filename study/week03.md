@@ -121,8 +121,11 @@
 
 ### 🎮 예제 게임 따라하기
 1. 실습 코드 적절하게 옮겨보기
+
 2. 새로운 씬 만들기 (ending.lua, setting.lua)
+
 3. game.lua와 ending.lua 연결하기 (다시 돌아가면 게임 새로 시작 show 다시 실행, setVariable도 사용해보기)
+
 4. game.lua와 setting.lua 연결하기 (다시 돌아가면 게임 그대로 이어서 timer 다시 실행, show는 그대로)
 
 <br>
