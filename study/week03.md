@@ -407,14 +407,14 @@ end
 
 
 #### 3. setting.lua 연결하기
-* game에 직접적으로 연관된 부분이 아니기 때문에, create()에 추가한다. 
+* create()에 추가한다.
 ``` lua
  	local setting = display.newText("설정", display.contentWidth*0.8, display.contentHeight*0.15)
  	setting.size = 50
  	setting:setFillColor(0.3)
 
  	function setting:tap( event )
- 		
+ 		--
  	end
  	setting:addEventListener("tap", setting)
 
