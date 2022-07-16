@@ -24,15 +24,6 @@
 	onFirstView()  
 	```
 
-* scene을 생성하는 view1.lua 앞부분 살펴보기 
-
-	``` lua  
-	local composer = require( "composer" )  
-	local scene = composer.newScene()
-
-	~ 생략  
-	```
-	
 <br>
 	
 #### Scene 관련 이벤트
@@ -48,9 +39,12 @@
 
 	<img src="https://docs.coronalabs.com/images/simulator/composer-flowchart.png"  width="50%"/>
 
-	- view1.lua 뒷 부분  
+	- view1.lua 살펴보기
 	
 		``` lua  
+		local composer = require( "composer" )  
+		local scene = composer.newScene()
+
 		function scene:create( event )
 			local sceneGroup = self.view
 			--
