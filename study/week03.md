@@ -337,222 +337,8 @@ return scene
 
 **해결 방법**  
 
-1. hide()에서 씬을 삭제해서, 다시 돌아올 때마다 새롭게 scene이 생성되도록 한다.
-2. 다시 돌아올 때마다 실행되는 show()에 리셋 되어야할 부분들을 작성한다.
+* hide()에서 씬을 삭제해서, 다시 돌아올 때마다 새롭게 scene이 생성되도록 한다.
 
-여기서는 2 방법으로 해본다.
-
-* 게임 진행에 직접적으로 상관이 없는 부분은 create()에
-	- background, dice를 create()에 남겨둔다
-* 게임 진행에 직접적으로 상관이 있는 부분은 show()에 옮긴다.
-	- bunny, carrot, score, time과 그 와 관련된 이벤트 함수들
-
-<br>
-
-* scene:create()
-```lua
-function scene:create( event )
-	local sceneGroup = self.view
-	
-	local background = display.newImageRect("image/background.png", display.contentWidth, display.contentHeight)
-	background.x, background.y = display.contentWidth/2, display.contentHeight/2
-
-	local diceGroup = display.newGroup();
-	local dice = {}
-
-	for i = 1, 6 do
-		dice[i] = display.newImage(diceGroup, "image/dice ("..i..").png")
-		dice[i].x, dice[i].y = display.contentWidth*0.5, display.contentHeight*0.25
-
-		dice[i]:scale(2, 2)
-		dice[i].alpha = 0
-	end
-	dice[math.random(6)].alpha = 1
-
-	local function tapDice( event )
-		for i = 1, 6 do
-			dice[i].alpha = 0
-		end
-		dice[math.random(6)].alpha = 1
-	end
-
-	diceGroup:addEventListener("tap", tapDice)
-
-	-- 레이어 정리
-	sceneGroup:insert(background)
-	sceneGroup:insert(diceGroup)
-end
-```
-
-* scene:show()
-``` lua
-function scene:show( event )
-	local sceneGroup = self.view
-	local phase = event.phase
-	
-	if phase == "will" then
-		-- Called when the scene is still off screen and is about to move on screen
-	elseif phase == "did" then
-		-- Called when the scene is now on screen
-		-- 
-		-- INSERT code here to make the scene come alive
-		-- e.g. start timers, begin animation, play audio, etc.
-
-		local bunny = display.newImage("image/bunny.png")
-		bunny.x, bunny.y = display.contentWidth*0.3, display.contentHeight*0.6
-
-		local ground = display.newImage("image/ground.png")
-		ground.x, ground.y = display.contentWidth*0.7, display.contentHeight*0.7
-
-		local carrotGroup = display.newGroup()
-		local carrot = {}
-
-		for i = 1, 5 do
-			carrot[i] = display.newImageRect(carrotGroup, "image/carrot.png", 60, 150)
-			carrot[i].x, carrot[i].y = display.contentWidth*0.55 + 60*i, display.contentHeight*0.6
-		end
-
-		local score = display.newText(0, display.contentWidth*0.1, display.contentHeight*0.15)
-
-		score.size = 100
-		score:setFillColor(0)
-		score.alpha = 0.5
-
-		local time = display.newText(10, display.contentWidth*0.9, display.contentHeight*0.15)
-
-		time.size = 100
-		time:setFillColor(0)
-		time.alpha = 0.5
-
-		-- 레이어 정리
-		sceneGroup:insert(bunny)
-		sceneGroup:insert(ground)
-		sceneGroup:insert(carrotGroup)
-		sceneGroup:insert(score)
-		sceneGroup:insert(time)
-
-		ground:toFront()
-
-	 	local function dragCarrot( event )
-	 		if( event.phase == "began" ) then
-	 			display.getCurrentStage():setFocus( event.target )
-	 			event.target.isFocus = true
-	 			-- 드래그 시작할 때
-	 			event.target.initX = event.target.x
-				event.target.initY = event.target.y
-	 		elseif( event.phase == "moved" ) then
-
-	 			if ( event.target.isFocus ) then
-	 				-- 드래그 중일 때
-	 				event.target.x = event.xStart + event.xDelta
-	 				event.target.y = event.yStart + event.yDelta
-	 			end
-
-	 		elseif ( event.phase == "ended" or event.phase == "cancelled") then
-	 			display.getCurrentStage():setFocus( nil )
-	 			event.target.isFocus = false
-	 			-- 드래그 끝났을 때
-	 			if( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
-	 				and event.target.y > bunny.y -50 and event.target.y < bunny.y + 50) then
-
-	 				display.remove( event.target )
-	 				score.text = score.text + 1
-
-	 				if( score.text == '5' ) then
-	 					score.text = '성공!'
-	 					time.alpha = 0
-
-	 					composer.gotoScene("ending")
-	 				end
-
-	 			else 
-	 				event.target.x = event.target.initX
-	 				event.target.y = event.target.initY
-	 			end
-	 		end
-	 	end
-
-	 	for i = 1, 5 do
-	 		carrot[i]:addEventListener("touch", dragCarrot)
-	 	end
-
-	 	local function counter ( event )
-	 		time.text = time.text - 1
-
-	 		if( time.text == '5' ) then
-	 			time:setFillColor(1, 0, 0)
-	 		end
-
-	 		if( time.text == '-1') then
-	 			time.alpha = 0
-
-	 			if( score.text ~= '성공!' ) then
-	 				score.text = "실패!"
-	 				bunny:rotate(90)
-
-	 				for i = 1, 5 do
-				 		carrot[i]:removeEventListener("touch", dragCarrot)
-				 	end
-	 			end
-	 			composer.gotoScene("ending") 
-	 		end
-	 	end
-
-	 	timeAttack = timer.performWithDelay(1000, counter, 11)
-	end	
-end
-```
-
-**실행 결과**  
-![Alt text](../image/week03/exam03.gif)  
-
-1. 돌아왔을 때 이전 오브젝트와 겹친다.
-2. 이전 타이머가 남아있어서, 타이머가 다 되었을때 다시 ending으로 돌아와버림
-
-<br>
-
-**해결 방법**  
-
-1. show()에서 생성된 diplay object들을 모아서 hide()에서 삭제한다. 
-2. timer을 hide()에서 정지한다.
-
-<br>
-
-* show()에서 사용하는 변수들을 hide()에서도 접근하기 위해 함수 밖에 선언한다.
-```lua
-local composer = require( "composer" )
-local scene = composer.newScene()
-
--- 변수 선언
-local gameGroup
-local timeAttack
-
-function scene:create( event )
-	...
-```
-
-* show()에서 오브젝트들을 gameGroup에 담기
-``` lua
-	-- 레이어 정리
-	gameGroup = display.newGroup()
-
-	gameGroup:insert(bunny)
-	gameGroup:insert(ground)
-	gameGroup:insert(carrotGroup)
-	gameGroup:insert(score)
-	gameGroup:insert(time)
-
-	ground:toFront()
-
-	sceneGroup:insert(gameGroup)
-```
-
-* 앞에서 변수를 선언했으니, local 빼주기
-```lua
-	timeAttack = timer.performWithDelay(1000, counter, 11)
-```
-
-* hide()에 필요한 코드 추가
 ``` lua
 function scene:hide( event )
 	local sceneGroup = self.view
@@ -563,17 +349,62 @@ function scene:hide( event )
 		--
 		-- INSERT code here to pause the scene
 		-- e.g. stop timers, stop animation, unload sounds, etc.)
+		
+		composer.removeScene('game') -- 추가
+
 	elseif phase == "did" then
 		-- Called when the scene is now off screen
-
-		-- 추가
-		timer.cancel(timeAttack)
-		display.remove(gameGroup)
 	end
 end
 ```
 
+**중요! timer는 장면이 전환되어도 계속 돌아가기 때문에, 필요가 없다면 timer를 꼭 삭제해주어야 합니다**
+
+* create()와 hide() 둘다 변수에 접근할 수 있도록 함수 밖에 변수를 선언해줍니다.
+```lua
+local composer = require( "composer" )
+local scene = composer.newScene()
+
+local timeAttack
+
+function scene:create( event )
+	 ...
+	 -- 앞에서 변수를 선언했기 때문에 앞에 local를 제거해준다.
+	 timeAttack = timer.performWithDelay(1000, counter, 11)
+```
+
+* timer를 정지하는 코드를 작성해줍니다.
+```lua
+function scene:hide( event )
+	local sceneGroup = self.view
+	local phase = event.phase
+	
+	if event.phase == "will" then
+		-- Called when the scene is on screen and is about to move off screen
+		--
+		-- INSERT code here to pause the scene
+		-- e.g. stop timers, stop animation, unload sounds, etc.)
+
+		composer.removeScene('game')
+		timer.cancel(timeAttack) -- 추가
+
+	elseif phase == "did" then
+		-- Called when the scene is now off screen
+	end
+end
+```
 ![Alt text](../image/week03/exam04.gif)  
+
+* 정상적으로 실행됩니다.
+
+<br>
+
+**왜 will에다가 작성하나요??**
+
+* did에다가 작성할 경우, 오류는 나지 않지만 가끔 scene을 삭제하는 타이밍이 늦어서 이미지가 깨지는 현상이 나타납니다!
+
+![Alt text](../image/week03/exam09.gif)  
+
 
 #### 3. setting.lua 연결하기
 * game에 직접적으로 연관된 부분이 아니기 때문에, create()에 추가한다. 
@@ -625,6 +456,12 @@ end
 * composer.getVariable()로 값을 받아와서 timeAttack을 재개한다.  
 
 ![Alt text](../image/week03/exam06.gif) 
+
+**또다른 방법?**
+
+* 타이머를 그냥 전역변수로 선언해서 다른 lua에서도 접근할 수 있도록 할 수도 있습니다.
+* TIP: 전역 변수는 헷갈리지 않게 main.lua에 선언해서 사용하기 
+
 <br>
 
 ### 🕒 이번주 과제 안내
