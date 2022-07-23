@@ -145,6 +145,10 @@
 			end
 		end
 	```
+	* **영상 촬영 이후 수정**
+		+ elseif ( event.phase == "ended" or event.phase == "cancelled") then ~ 부분의 코드가 영상과 약간 다릅니다.
+		+ 관련 자세한 사항은 [여기](../QnA/01.md)를 읽어보시면 됩니다.
+	
 
 	- 그런데 조금 이상하다?  
 		![Alt text](../image/week02/exam03.gif)  
@@ -262,9 +266,7 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 			carrot[i]:addEventListener("touch", dragCarrot)
 		end
 	```
-* **영상 촬영 이후 수정**
-	- elseif ( event.phase == "ended" or event.phase == "cancelled") then ~ 부분의 코드가 영상과 약간 다릅니다.
-	- 영상에서는 깊게 이해하지 말고 공식으로 생각하라고 했지만, 왜 그런지 궁금하신 분들은 [여기](../QnA/01.md)를 읽어보시면 됩니다.
+
 
 <br>
 
