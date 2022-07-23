@@ -12,15 +12,14 @@
 ### 대화형 게임에서 왜 json?
 * **json이란**
 	- 일종의 데이터 교환 양식
+	- javaScript Object Notation: javascript 객체 문법으로 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷 
 
 * **대화형 게임을 만들 때 json을 활용해보자..!**  
 
 	![Alt text](../image/week04-1/01.png)  
 
-	- 스크립트를 문자열에 담는다면?
-		+ 한 컷에 대한 정보 (배경, 화자 이미지, 화자 이름, 대화 내용 등등)을 다 각각 따로 관리해야 한다.
 	- json으로 관리한다면?  
-		+ 여러 정보를 한꺼번에 저장해서 관리할 수 있다.
+		+ 한 장면에 관련된 여러 정보를 한꺼번에 저장해서 관리할 수 있다. 그리고, 
 	
 		```json
 		[
@@ -38,18 +37,52 @@
 			}
 		]
 		```
+		
+		+ [🔗 JSON 파일에 대한 자세한 설명](http://www.tcpschool.com/json/json_basic_structure)
+		
+		+ 대충 이해하기
+			* 큰 배열 [ ]에, { } 데이터 묶음 여러개 작성함.
+			* { } 데이터 묶음 속에
+				- "속성 이름" : "값"
+		+  데이터 포맷이 다 같아야 하는 것은 아니다.
+	
+			* 사용 예시  
+			
+				``` json
+				[
+					{
+						"type" : "background",
+						"image" : "image/뽀로로네 집.png"
+					},
+					{
+						"type" : "dialog",
+						"speaker" : "뽀로로",
+						"image" : "image/pororo.png",
+						"content" : "노는게 제일 좋아~"
+					},
+					{
+						"type" : "sound",
+						"sound" : "sound/놀이터 소리.mp3"
+					}
+					...
+				]
+				```
 
 		+ (Tip). json 파일 입출력을 활용해 세이브/로드 기능을 구현할 수도 있다!
+		+ [파일 입출력 가이드](https://docs.coronalabs.com/guide/data/readWriteFiles/index.html)
 
 <br>
 
 ### json으로 정보 불러오기
+[🔗 실습할 프로젝트 다운로드](https://github.com/HeoJiye/Lua_study/raw/main/image/week04-1/Proro%20Park.zip)
 
-#### main.lua에 작성한 json 파싱 부분
+#### main.lua에 json 파싱 함수 작성하기
 * **json 파싱이란?**
 	- json 파일을 읽어들여서 **system.pathForFile()** 
 	- lua에서 사용할 수 있는 데이터로 다듬는 **json.decodeFile()** 과정
-	- 다 lua 기본 기능에 있기 때문에, 함수 호출로 간단하게 파싱 가능.
+		+ json.decodeFile()의 반대는 [json.encode()](https://docs.coronalabs.com/api/library/json/encode.html)
+	- 다 Solar2D 기본 기능에 있기 때문에, 함수 호출로 간단하게 파싱 가능.
+
 ``` lua
 -- json parsing
 local json = require "json"
@@ -75,8 +108,6 @@ end
 ### json으로 캐릭터 소개 파트 완성하기
 ![Alt text](../image/week04-1/02.gif) 
 
-[🔗 실습할 프로젝트 다운로드](https://github.com/HeoJiye/Lua_study/raw/main/image/week04-1/Proro%20Park.zip)
-
 **character_info.json 살펴보기**
 ``` json
 [
@@ -93,12 +124,7 @@ end
 	...
 ]
 ```
-[🔗 JSON 파일에 대한 자세한 설명](http://www.tcpschool.com/json/json_basic_structure)
 
-* 대충 이해하기
-	- 큰 배열 [ ]에, { } 데이터 묶음 여러개 작성함.
-	- { } 데이터 묶음 속에
-		+ "속성 이름" : "값"
 
 **character_info.lua 작성하기**
 ```lua
@@ -164,30 +190,6 @@ end
 ```
 
 * speaker, image, content로 이루어진 간단한 스크립트 파일이다.  
-
-※ 데이터 포맷이 다 같아야 하는 것은 아니다.
-
-* 사용 예시  
-
-	``` json
-	[
-		{
-			"type" : "background",
-			"image" : "image/뽀로로네 집.png"
-		},
-		{
-			"type" : "dialog",
-			"speaker" : "뽀로로",
-			"image" : "image/pororo.png",
-			"content" : "노는게 제일 좋아~"
-		},
-		{
-			"type" : "sound",
-			"sound" : "sound/놀이터 소리.mp3"
-		}
-		...
-	]
-	```
 
 **intro.lua 작성하기**
 ```lua
