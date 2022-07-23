@@ -134,10 +134,14 @@
 				end
 
 			elseif ( event.phase == "ended" or event.phase == "cancelled") then
-				display.getCurrentStage():setFocus( nil )
-				event.target.isFocus = false
-				-- 드래그 끝났을 때
-
+				if ( event.target.isFocus ) then
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
+					-- 드래그 끝났을 때
+				else
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
+				end
 			end
 		end
 	```
@@ -242,10 +246,15 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 				end
 
 			elseif ( event.phase == "ended" or event.phase == "cancelled") then
-				display.getCurrentStage():setFocus( nil )
-				event.target.isFocus = false
-				-- 드래그 끝났을 때
+				if ( event.target.isFocus ) then
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
+					-- 드래그 끝났을 때
 
+				else
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
+				end
 			end
 		end
 
@@ -253,6 +262,9 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 			carrot[i]:addEventListener("touch", dragCarrot)
 		end
 	```
+* **영상 촬영 이후 수정**
+	- elseif ( event.phase == "ended" or event.phase == "cancelled") then ~ 부분의 코드가 영상과 약간 다릅니다.
+	- 영상에서는 깊게 이해하지 말고 공식으로 생각하라고 했지만, 왜 그런지 궁금하신 분들은 [여기](../QnA/01.md)를 읽어보시면 됩니다.
 
 <br>
 
@@ -276,14 +288,21 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 				end
 
 			elseif ( event.phase == "ended" or event.phase == "cancelled") then
-				display.getCurrentStage():setFocus( nil )
-				event.target.isFocus = false
-				-- 드래그 끝났을 때
-				if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
-					and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+				if ( event.target.isFocus ) then
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
 
-					display.remove(event.target) -- 당근 삭제하기
-					score.text = score.text + 1 -- 점수 올리기
+					-- 드래그 끝났을 때
+					if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
+						and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+
+						display.remove(event.target) -- 당근 삭제하기
+						score.text = score.text + 1 -- 점수 올리기
+					end
+
+				else
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
 				end
 			end
 		end
@@ -301,18 +320,25 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 * 이렇게 하면 될 것 같지만..?
 	```lua
 		elseif ( event.phase == "ended" or event.phase == "cancelled") then
-			display.getCurrentStage():setFocus( nil )
-			event.target.isFocus = false
-			-- 드래그 끝났을 때
-			if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
-				and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+			if ( event.target.isFocus ) then
+				display.getCurrentStage():setFocus( nil )
+				event.target.isFocus = false
 
-				display.remove(event.target) -- 당근 삭제하기
-				score.text = score.text + 1 -- 점수 올리기
+				-- 드래그 끝났을 때
+				if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
+					and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+
+					display.remove(event.target) -- 당근 삭제하기
+					score.text = score.text + 1 -- 점수 올리기
+				else
+					-- 원래 자리로 돌아가기
+					event.target.x = event.xStart
+					event.target.y = event.yStart
+				end
+
 			else
-				-- 원래 자리로 돌아가기
-				event.target.x = event.xStart
-				event.target.y = event.yStart
+				display.getCurrentStage():setFocus( nil )
+				event.target.isFocus = false
 			end
 		end
 	```
@@ -344,17 +370,24 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 				end
 
 			elseif ( event.phase == "ended" or event.phase == "cancelled") then
-				display.getCurrentStage():setFocus( nil )
-				event.target.isFocus = false
-				-- 드래그 끝났을 때
-				if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
-					and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+				if ( event.target.isFocus ) then
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
 
-					display.remove(event.target) -- 당근 삭제하기
-					score.text = score.text + 1 -- 점수 올리기
+					-- 드래그 끝났을 때
+					if ( event.target.x > bunny.x - 50 and event.target.x < bunny.x + 50
+						and event.target.y > bunny.y - 50 and event.target.y < bunny.y + 50) then
+
+						display.remove(event.target) -- 당근 삭제하기
+						score.text = score.text + 1 -- 점수 올리기
+					else
+						event.target.x = event.target.initX
+						event.target.y = event.target.initY
+					end
+
 				else
-					event.target.x = event.target.initX
-					event.target.y = event.target.initY
+					display.getCurrentStage():setFocus( nil )
+					event.target.isFocus = false
 				end
 			end
 		end
