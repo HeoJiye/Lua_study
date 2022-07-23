@@ -1,0 +1,37 @@
+[
+	{
+		"name" : "뽀로로",
+		"info" : "호기심 많은 꼬마 팽귄",
+		"image" : "image/pororo.png"
+	},
+	{
+		"name" : "크롱",
+		"info" : "귀여운 말썽꾸러기 아기 공룡",
+		"image" : "image/crong.png"
+	},
+	{
+		"name" : "패티",
+		"info" : "활달하고 명량한 꼬마 펭귄",
+		"image" : "image/petty.png"
+	},
+	{
+		"name" : "루피",
+		"info" : "수줍음 많은 꼬마 비버",
+		"image" : "image/loppy.png"
+	},
+	{
+		"name" : "해리",
+		"info" : "노래를 좋아하는 유쾌한 벌새",
+		"image" : "image/harry.png"
+	},
+	{
+		"name" : "포비",
+		"info" : "마음씨 착한 꼬마 백곰",
+		"image" : "image/poby.png"
+	},
+	{
+		"name" : "에디",
+		"info" : "영리한 발명왕 꼬마 여우",
+		"image" : "image/eddy.png"
+	}
+]

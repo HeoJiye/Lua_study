@@ -1,0 +1,37 @@
+[
+	{
+		"speaker": "뽀로로",
+		"image" : "image/pororo.png",
+		"content" : "뽀로로파크는 어떤 곳일까요?"
+	},
+	{
+		"speaker": "루피",
+		"image" : "image/loppy.png",
+		"content" : "뽀로로파크는 놀이를 하면서 교육 효과를 창출하는 에듀테인먼트(edutainment) 공간이며,"
+	},
+	{
+		"speaker": "포비",
+		"image" : "image/poby.png",
+		"content" : "친근한 뽀로로 캐릭터로 아이들을 서로 연결시키고 함께 즐기는 놀이문화의 장입니다."
+	},
+	{
+		"speaker": "패티",
+		"image" : "image/petty.png",
+		"content" : "뽀로로파크는 모든 어린이들에게 놀이적 커뮤니티를 통해 놀이를 통한 교육 효과를 창출하는 것을 중요한 가치와 목적으로 하며"
+	},
+	{
+		"speaker": "에디",
+		"image" : "image/eddy.png",
+		"content" : "우리 아이들이 엄마 아빠와 신나게 놀고"
+	},
+	{
+		"speaker": "해리",
+		"image" : "image/harry.png",
+		"content" : "즐겁게 체험하고"
+	},
+	{
+		"speaker": "크롱",
+		"image" : "image/crong.png",
+		"content" : "공부하는 특별한 공간으로 거듭나겠습니다."
+	}
+]
