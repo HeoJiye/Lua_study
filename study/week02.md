@@ -149,7 +149,8 @@
 		+ elseif ( event.phase == "ended" or event.phase == "cancelled") then ~ 부분의 코드가 영상과 약간 다릅니다.
 		+ 관련 자세한 사항은 [여기](../QnA/01.md)를 읽어보시면 됩니다.
 	
-
+	<br>
+	
 	- 그런데 조금 이상하다?  
 		![Alt text](../image/week02/exam03.gif)  
 		커서 위치와 오브젝트 위치가 맞지 않음
