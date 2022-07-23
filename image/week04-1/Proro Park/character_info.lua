@@ -24,7 +24,7 @@ function scene:create( event )
 	logo:scale( 2, 2 )
 
 	-- json에서 정보 읽기
-
+	
 
 	-- CONTENT
 	local content = display.newGroup()

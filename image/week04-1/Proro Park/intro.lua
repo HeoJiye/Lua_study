@@ -26,11 +26,11 @@ function scene:create( event )
 	-- DIALOG
 	local dialog = display.newGroup()
 
-	local speaker = display.newRect(dialog, display.contentWidth*0.15, display.contentHeight*0.75, 200, 200)
+	local image = display.newRect(dialog, display.contentWidth*0.15, display.contentHeight*0.75, 200, 200)
 	
-	local name = display.newText(dialog, "캐릭터 이름", display.contentWidth*0.35, display.contentHeight*0.67, display.contentWidth*0.2, display.contentHeight*0.1)
-	name:setFillColor(0)
-	name.size = 50
+	local speaker = display.newText(dialog, "캐릭터 이름", display.contentWidth*0.35, display.contentHeight*0.67, display.contentWidth*0.2, display.contentHeight*0.1)
+	speaker:setFillColor(0)
+	speaker.size = 50
 
 	local content = display.newText(dialog, "솰라솰라 불라불라", display.contentWidth*0.6, display.contentHeight*0.85, display.contentWidth*0.7, display.contentHeight*0.2)
 	content:setFillColor(0)

@@ -213,13 +213,12 @@ end
 			return
 		end
 
-		speaker.fill = {
+		speakertext = Data[index].speaker
+		content.text = Data[index].content
+		image.fill = {
 			type = "image",
 			filename = Data[index].image
 		}
-
-		name.text = Data[index].speaker
-		content.text = Data[index].content
 	end
 	bg[1]:addEventListener("tap", nextScript)
 
