@@ -41,7 +41,6 @@ function scene:destroy( event )
   physics.stop()
 end
 ```
-<br>
 
 * with Scene Event Funtion
 	- 
@@ -197,34 +196,34 @@ function scene:create( event )
 	function arrowTab( event )
 		x = player.x
 		y = player.y
-
 		if (event.target.name == "center") then
 			if (arrow[4] == "left") then
 				transition.to(player, {time=100, x=(x-100), y=(y-200)})
-	        else
-	            transition.to(player, {time=100, x=(x+100), y=(y-200)})
-	        end
-	    else
-	    	if (event.target.name == arrow[4]) then
-	            if (event.target.name == "left") then
-	               transition.to(player, {time=100, x=(x-50)})
-	            else
-	               transition.to(player, {time=100, x=(x+50)})
-	            end
-	         else
-	            arrow[4] = event.target.name
-	            player:scale(-1, 1)
-	            physics.removeBody(player)
-	            
-	            if (event.target.name == "left") then
-	               physics.addBody(player, {friction=1, outline=player_outline_flip})
-	               transition.to(player, {time=100, x=(x-50)})
-	            else
-	               physics.addBody(player, {friction=1, outline=player_outline_none})
-	               transition.to(player, {time=100, x=(x+50)})
-	            end
-	            player.isFixedRotation = true
+			else
+			    transition.to(player, {time=100, x=(x+100), y=(y-200)})
 			end
+			
+		else
+			if (event.target.name == arrow[4]) then
+			    if (event.target.name == "left") then
+			       transition.to(player, {time=100, x=(x-50)})
+			    else
+			       transition.to(player, {time=100, x=(x+50)})
+			    end
+			 else
+			    arrow[4] = event.target.name
+			    player:scale(-1, 1)
+			    physics.removeBody(player)
+
+			    if (event.target.name == "left") then
+			       physics.addBody(player, {friction=1, outline=player_outline_flip})
+			       transition.to(player, {time=100, x=(x-50)})
+			    else
+			       physics.addBody(player, {friction=1, outline=player_outline_none})
+			       transition.to(player, {time=100, x=(x+50)})
+			    end
+			    player.isFixedRotation = true
+				end
 		end
 	end
 
@@ -361,8 +360,8 @@ local flag = false
 *  wall에도 collision event를 추가해서 화면 바깥으로 나갔을 때 게임오버 화면으로 넘어가게 만들기.
 	- 힌트: timer.perfornWithDelay() 이용한다.
 
-	![Alt text](../image/week03/exam07.gif) 
+	![Alt text](../image/week04-2/과제.gif) 
 
 <br>
 
-#### 📚 [제출 폼 링크](https://forms.gle/YBkNfMRhko5yadhG9)
+#### 📚 [제출 폼 링크](https://forms.gle/u5eTVrFbBy1kEvBf6)
