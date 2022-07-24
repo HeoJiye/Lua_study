@@ -251,18 +251,18 @@ function scene:create( event )
 			if(event.other.name == "chest" or event.other.name == "potion") then
 				flag = true
 
-		        if(event.other.name == "chest") then
-		            score = score + 100
-		        else 
-		           score = score - 100
-		       	end
+				if(event.other.name == "chest") then
+				    score = score + 100
+				else 
+				   score = score - 100
+				end
 
-		        timer.performWithDelay( 500, function()
-		           	physics.removeBody( event.other )
-		            flag = false
-		        end )
+				timer.performWithDelay( 500, function()
+					physics.removeBody( event.other )
+				    flag = false
+				end )
 
-		        print(score)
+				print(score)
 			end
 		end
 	end
