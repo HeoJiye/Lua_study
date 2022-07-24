@@ -107,7 +107,7 @@ Runtime:addEventListener( "collision", 함수이름 )
 ### 🎮 예제 게임 따라하기
 
 #### 토끼가 발판 사이를 점프하며 움직이는 게임
-
+[🔗 실습할 이미지 파일 다운로드](https://github.com/HeoJiye/Lua_study/raw/main/image/week04-2/image.zip)
 
 
 ```lua
