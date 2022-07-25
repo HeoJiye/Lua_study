@@ -15,7 +15,7 @@
 * [물리엔진 게임 제작 기초 (physics 사용법)](./study/week04_2.md)
 
 #### 3️⃣ 부록
-* [Solar2D 기능별 가이드](./study/supple01.md)
+* [Solar2D 기능별 가이드(미완)](./study/supple01.md)
 * [스토어 출시용 apk 빌드 방법](./study/supple02.md)
 
 ## 🎥 [강의 영상](https://www.youtube.com/playlist?list=PLga3qWRlaoi7n1gggte-CWx3YYsGt4QkK)
