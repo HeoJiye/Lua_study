@@ -31,4 +31,4 @@
 * 🏆[선기수 신입부원 프로젝트 보러가기](http://npc.dothome.co.kr/forumdisplay.php?fid=16)
 
 ## ❓ QnA
-1. [드래그 함수 관련 오류](QnA/01.md)
+* [드래그 함수 관련 오류](QnA/01.md)
