@@ -22,6 +22,7 @@
 
 ## 📌 참고 자료
 * 🧡 [Solar2D 개발자 문서](https://docs.coronalabs.com/)
+* 🧡 [Solar2D 포럼(Solar2D의 Stack Overflow, 오류 검색용)](https://forums.solar2d.com/)
 * 🎮 [Lua 데모 프로젝트 모음](https://docs.coronalabs.com/guide/programming/index.html#demo-projects)
 * 🎨 [무료 게임 리소스 사이트](https://www.kenney.nl/assets)
 
