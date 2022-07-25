@@ -22,10 +22,13 @@
 
 ## 📌 참고 자료
 * 🧡 [Solar2D 개발자 문서](https://docs.coronalabs.com/)
-* 🧡 [Solar2D 포럼(Solar2D의 Stack Overflow, 오류 검색용)](https://forums.solar2d.com/)
+* 📚 [Solar2D 포럼(Solar2D의 Stack Overflow, 오류 검색용)](https://forums.solar2d.com/)
 * 🎮 [Lua 데모 프로젝트 모음](https://docs.coronalabs.com/guide/programming/index.html#demo-projects)
 * 🎨 [무료 게임 리소스 사이트](https://www.kenney.nl/assets)
 
+<br>
+
+* 🏆[선기수 신입부원 프로젝트 보러가기](http://npc.dothome.co.kr/forumdisplay.php?fid=16)
+
 ## ❓ QnA
 1. [드래그 함수 관련 오류](QnA/01.md)
-
