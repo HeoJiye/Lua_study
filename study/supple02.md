@@ -21,5 +21,7 @@
 
 ![Alt text](../image/supple02/07.png)  
 
+keystore 파일만 생성되었다면 OK 뒤 단계 할 필요없음
+
 #### 두번째. 생성한 release keystore를 이용해 apk 빌드를 완료한다.
 ![Alt text](../image/supple02/08.png)  
