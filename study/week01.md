@@ -19,6 +19,8 @@
 
 ### 👩‍🔧 스터디 준비하기
 
+#### [프로그램 설치](download.md)
+
 #### 프로젝트 생성
 ![Alt text](../image/week01/exam05.png)  
 Solar2D 실행 후, New Project 클릭
