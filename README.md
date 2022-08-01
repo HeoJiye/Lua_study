@@ -8,8 +8,7 @@
 * [필요한 프로그램 다운로드](study/download.md)
 
 #### 1️⃣ Lua를 다루는 법
-* 1차시: [Lua야 안녕!](./study/lua_basic01.md)
-* 2차시: [코딩의 세계로](./study/lua_basic02.md)
+* 추가 예정
 
 #### 2️⃣ Solar2D 기초
 * 1차시: [Lua 기본문법과 display 사용법](./study/week01.md)
