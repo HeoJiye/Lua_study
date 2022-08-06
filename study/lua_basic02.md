@@ -26,8 +26,6 @@
 	※ Lua 기초 파트는 설정이 별 의미없습니다. 경로만 신경써서 생성해주시면 됩니다.
 	![Alt text](../image/lua_basic/04.jpg)
 
-
-
 <br>
 
 #### 코딩 시작하기
@@ -53,4 +51,38 @@
 	-- Your code here
 
 	print("Hello Lua!!")
+	```
+
+<br>
+
+### 1주차 과제
+[제출폼](https://forms.gle/JqhBQegPadt1dXCu9)  
+
+1. **(01. print()까지)** 다음과 같이 결과가 나오도록 코드를 작성해보세요. 
+	- WARNING, ERROR 강조 표시는 무시하고 텍스트만 맞게 출력하면 됩니다.
+	![Alt text](../image/lua_basic/hw01.PNG)
+
+2. **(04. 연산자까지)** 다음 결과가 나오도록 코드를 작성해보세요.
+	- 남은 붕어빵 remain, 손님의 주문 order 변수 사용
+	- 초반 붕어빵은 10개, 손님의 주문은 1-5사이의 개수
+	- (+) math.random(5) = 1-5사이의 개수를 랜덤으로 생성하는 기능, 후에서 다루지만 한번 사용해보세요~! 그냥 값처럼 사용하면 됩니다.  
+	```lua
+	local order = math.random(5)
+	```
+
+	![Alt text](../image/lua_basic/hw02.PNG)
+	
+3. **(05. 테이블까지)** 다음 코드는 잘못된 코드입니다. 잘못된 이유를 작성해주세요.
+	+ 이유는 두가지입니다.  
+	
+	```lua
+	local gugudan = {}
+
+	local gugudan[1][1] = 1
+	local gugudan[1][2] = 2
+	local gugudan[1][3] = 3
+
+	local gugudan[2][1] = 2
+	local gugudan[2][2] = 4
+	local gugudan[2][3] = 6
 	```
