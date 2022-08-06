@@ -60,7 +60,7 @@
 
 1. **(01. print()까지)** 다음과 같이 결과가 나오도록 코드를 작성해보세요. 
 	- WARNING, ERROR 강조 표시는 무시하고 텍스트만 맞게 출력하면 됩니다.
-	![Alt text](../image/lua_basic/hw01.PNG)
+	![Alt text](../image/lua_basic/hw01.png)
 
 2. **(04. 연산자까지)** 다음 결과가 나오도록 코드를 작성해보세요.
 	- 남은 붕어빵 remain, 손님의 주문 order 변수 사용
@@ -70,7 +70,7 @@
 	local order = math.random(5)
 	```
 
-	![Alt text](../image/lua_basic/hw02.PNG)
+	![Alt text](../image/lua_basic/hw02.png)
 	
 3. **(05. 테이블까지)** 다음 코드는 잘못된 코드입니다. 잘못된 이유를 작성해주세요.
 	+ 이유는 두가지입니다.  
