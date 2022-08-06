@@ -59,7 +59,7 @@
 [제출폼](https://forms.gle/JqhBQegPadt1dXCu9)  
 
 1. **(01. print()까지)** 다음과 같이 결과가 나오도록 코드를 작성해보세요. 
-	- WARNING, ERROR 강조 표시는 무시하고 텍스트만 맞게 출력하면 됩니다.
+	- WARNING, ERROR 강조 표시는 무시하고 텍스트만 맞게 출력하면 됩니다.  
 	![Alt text](../image/lua_basic/hw01.png)
 
 2. **(04. 연산자까지)** 다음 결과가 나오도록 코드를 작성해보세요.
