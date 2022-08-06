@@ -4,11 +4,11 @@
 ### 🔗 [pdf 다운받기](image/lua다루는법.pdf)
 
 ### 🏛 목차
-* [print()]()
-* [주석]()
-* [변수]()
-* [연산자]()
-* [테이블]()
+* [print()](#0%EF%B8%8F⃣1%EF%B8%8F⃣-print)
+* [주석](#0%EF%B8%8F⃣2%EF%B8%8F⃣-주석)
+* [변수](#0%EF%B8%8F⃣3%EF%B8%8F⃣-변수)
+* [연산자](#0%EF%B8%8F⃣4%EF%B8%8F⃣-테이블)
+* [테이블](#0%EF%B8%8F⃣5%EF%B8%8F⃣-연산자)
 * true/false
 * 조건문
 * 반복문
@@ -25,27 +25,32 @@
 
 <br>
 
-#### 0️⃣1️⃣ print
+### 0️⃣1️⃣ print
+
 ![Alt text](../image/lua_basic/01.PNG)
 
 <br>
 
-#### 0️⃣2️⃣ 주석
+### 0️⃣2️⃣ 주석
+
 ![Alt text](../image/lua_basic/02.PNG)
 
 <br>
 
-#### 0️⃣3️⃣ 변수
+### 0️⃣3️⃣ 변수
+
 ![Alt text](../image/lua_basic/03.PNG)
 
 <br>
 
-#### 0️⃣4️⃣ 테이블
+### 0️⃣4️⃣ 테이블
+
 ![Alt text](../image/lua_basic/04.PNG)
 
 <br>
 
-#### 0️⃣5️⃣ 연산자
+### 0️⃣5️⃣ 연산자
+
 ![Alt text](../image/lua_basic/05.PNG)
 
 <br>
