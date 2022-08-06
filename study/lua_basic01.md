@@ -1,7 +1,7 @@
 # Lua를 다루는 법
 창업동아리에서 진행하는 LUA 교과서 프로젝트 中 기본문법 부록 초안
 
-### 🔗 [pdf 다운받기](image/lua다루는법.pdf)
+### 🔗 [pdf 다운받기](../image/lua다루는법.pdf)
 
 ### 🏛 목차
 * [print()](#0%EF%B8%8F⃣1%EF%B8%8F⃣-print)
