@@ -24,7 +24,7 @@
 
 
 ### 🔗 [스터디 준비하기](lua_basic02.md#-스터디-준비하기)
-### 🔗 [1주차 교안 pdf로 다운받아 보기](../image/lua_basic/lua다루는법.pdf)
+### 🔗 [1주차 교안 pdf로 다운받아 보기](../image/lua_basic/lua다루는법_01.pdf)
 ### 🔗 [1주차 과제](lua_basic02.md#1주차-과제)
 
 ### 0️⃣1️⃣ print
