@@ -29,6 +29,7 @@
 <br>
 
 #### 코딩 시작하기
+Sublime Text3 사용 팁에 가깝습니다. 다른 코드편집기를 사용한다면 그냥 생성한 프로젝트 폴더에 main.lua 파일을 코드편집기로 열면 됩니다.
 
 1. Sublime Text3 실행
 	![Alt text](../image/lua_basic/02.jpg)
