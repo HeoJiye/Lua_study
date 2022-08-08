@@ -62,7 +62,6 @@ Sublime Text3 사용 팁에 가깝습니다. 다른 코드편집기를 사용한
 
 <br>
 
-
 ### 1주차 과제
 [제출폼](https://forms.gle/JqhBQegPadt1dXCu9)  
 
