@@ -6,9 +6,9 @@
 * [변수](#0%EF%B8%8F⃣3%EF%B8%8F⃣-변수)
 * [연산자](#0%EF%B8%8F⃣4%EF%B8%8F⃣-테이블)
 * [테이블](#0%EF%B8%8F⃣5%EF%B8%8F⃣-연산자)
-* true/false
-* 조건문
-* 반복문
+* [true/false](#0%EF%B8%8F⃣6%EF%B8%8F⃣-truefalse)
+* [조건문](#0%EF%B8%8F⃣7%EF%B8%8F⃣-조건문)
+* [반복문](#0%EF%B8%8F⃣8%EF%B8%8F⃣-반복문)
 * 함수
 * 변수의 범위
 
@@ -22,14 +22,13 @@
 
 <br>
 
-
 ### 🔗 [스터디 준비하기](lua_basic02.md#-스터디-준비하기)
 ### 🔗 [1주차 과제](lua_basic02.md#1주차-과제)
 
 <br>
 
 ### 🔗 [1주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_01.pdf)
-### 🔗 [2주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_01.pdf)
+### 🔗 [2주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_02.pdf)
 
 <br>
 
