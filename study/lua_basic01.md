@@ -24,8 +24,14 @@
 
 
 ### 🔗 [스터디 준비하기](lua_basic02.md#-스터디-준비하기)
-### 🔗 [1주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/blob/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_01.pdf) 오른쪽 가운데에 Download 버튼
 ### 🔗 [1주차 과제](lua_basic02.md#1주차-과제)
+
+<br>
+
+### 🔗 [1주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_01.pdf)
+### 🔗 [2주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_01.pdf)
+
+<br>
 
 ### 0️⃣1️⃣ print
 
@@ -54,5 +60,23 @@
 ### 0️⃣5️⃣ 연산자
 
 ![Alt text](../image/lua_basic/05.PNG)
+
+<br>
+
+### 0️⃣6️⃣ true/false
+
+![Alt text](../image/lua_basic/06.PNG)
+
+<br>
+
+### 0️⃣7️⃣ 조건문
+
+![Alt text](../image/lua_basic/07.PNG)
+
+<br>
+
+### 0️⃣8️⃣ 반복문
+
+![Alt text](../image/lua_basic/08.PNG)
 
 <br>
