@@ -6,8 +6,8 @@
 ![Alt text](../image/supple02/01.png)
 
 ### 2️⃣ 스토어 출시용 apk 빌드 방법
-#### 조건
-* JDK 버전 15이상
+
+
 
 #### 첫번째. android studio를 이용해 release keystore를 생성한다.
 
@@ -26,10 +26,21 @@ keystore 파일만 생성되었다면 OK 뒤 단계 할 필요없음
 #### 두번째. 생성한 release keystore를 이용해 apk 빌드를 완료한다.
 ![Alt text](../image/supple02/08.png)  
 
-package 기본 설정에서 되도록 바꾸세요.
+package는 기본 설정에서 되도록 바꾸세요!
+Ex) ddwu.npc.seongbaoul
 
-#### 혹시 오류가 난다면?
-* vmware가 있울 경우, 빌드할 때 작업관리자에서 백그라운드 프로세스까지 vmware 관련 프로세스들을 강제 종료할 것
+<br>
+
+#### 만약 막히면 아래를 참고
+* 프로그램 버전 참고
+	- Solar2D SDK 버전 [3656](https://github.com/coronalabs/corona/releases/tag/3656)
+	- Android Studio 버전 2021.1.1
+	- JDK 버전 1.8.0_301 + **JRE 설치되지 않았다면 설치**
+		+ JDK를 다시 다운로드한 적이 있다면 JAVA_PATH 환경 변수 수정되었는지 확인.
+		+ 환경 변수 수정해도 안되면, 다른 버전의 JDK 삭제
+		+ 그래도 안되면 Solar2D 삭제 후 다시 다운로드 (잔여 디렉토리까지 삭제)
+
+* vmware가 있울 경우, 빌드할 때 작업관리자에서 vmware 관련 프로세스들을 종료해본다.
 * windows10에서 모바일 핫스팟 사용 시 오류가 날 수 있음. 와이파이 이용할 것.
 
 <br>
