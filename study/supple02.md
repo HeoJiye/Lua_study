@@ -32,7 +32,7 @@ Ex) ddwu.npc.seongbaoul
 <br>
 
 #### 만약 막히면 아래를 참고
-* 프로그램 버전 참고
+* 프로그램 버전 참고 (제 환경을 적어놨습니다)
 	- Solar2D SDK 버전 [3656](https://github.com/coronalabs/corona/releases/tag/3656)
 	- Android Studio 버전 2021.1.1
 	- JDK 버전 1.8.0_301 + **JRE 설치되지 않았다면 설치**
