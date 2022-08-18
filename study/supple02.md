@@ -32,9 +32,9 @@ Ex) ddwu.npc.seongbaoul
 <br>
 
 #### 만약 막히면 아래를 참고
-* 프로그램 버전 참고 (제 환경을 적어놨습니다)
-	- Solar2D SDK 버전 [3656](https://github.com/coronalabs/corona/releases/tag/3656)
-	- Android Studio 버전 2021.1.1
+* 프로그램 버전 참고 (제 환경을 적어놨습니다. 해당 버전보다 상위 버전이면 상관없을 듯 합니다.)
+	- Solar2D SDK 버전 3656 [설치](https://github.com/coronalabs/corona/releases/tag/3656)
+	- Android Studio 버전 2021.2.1
 	- JDK 버전 1.8.0_301 + **JRE 설치되지 않았다면 설치**
 		+ JDK를 다시 다운로드한 적이 있다면 JAVA_PATH 환경 변수 수정되었는지 확인.
 		+ 환경 변수 수정해도 안되면, 다른 버전의 JDK 삭제
