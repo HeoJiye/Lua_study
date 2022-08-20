@@ -9,8 +9,8 @@
 * [true/false](#0%EF%B8%8F⃣6%EF%B8%8F⃣-truefalse)
 * [조건문](#0%EF%B8%8F⃣7%EF%B8%8F⃣-조건문)
 * [반복문](#0%EF%B8%8F⃣8%EF%B8%8F⃣-반복문)
-* 함수
-* 변수의 범위
+* [함수]()
+* [변수/함수의 범위]()
 
 <br>
 
@@ -27,8 +27,7 @@
 
 <br>
 
-### 🔗 [1주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_01.pdf)
-### 🔗 [2주차 교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95_02.pdf)
+### 🔗 [(1-3주차 통합)교안 pdf로 다운받아 보기](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/lua%EB%A5%BC%EB%8B%A4%EB%A3%A8%EB%8A%94%EB%B2%95.pdf)
 
 <br>
 
@@ -79,3 +78,12 @@
 ![Alt text](../image/lua_basic/08.PNG)
 
 <br>
+
+### 0️⃣9️⃣ 함수
+
+![Alt text](../image/lua_basic/09_1.PNG)
+![Alt text](../image/lua_basic/09_2.PNG)
+
+### 1️⃣0️⃣ 변수/함수의 사용 범위
+
+![Alt text](../image/lua_basic/10.PNG)
