@@ -33,7 +33,6 @@ Ex) ddwu.npc.seongbaoul
 
 #### 만약 막히면 아래를 참고
 * 프로그램 버전 참고 (제 환경을 적어놨습니다. 해당 버전보다 상위 버전이면 상관없을 듯 합니다.)
-	- Solar2D SDK 버전 3656 [설치](https://github.com/coronalabs/corona/releases/tag/3656)
 	- Android Studio 버전 2021.2.1
 	- JDK 버전 1.8.0_301 + **JRE 설치되지 않았다면 설치할 것**
 		+ JDK를 다시 다운로드한 적이 있다면 JAVA_PATH 환경 변수 수정되었는지 확인.
@@ -42,7 +41,9 @@ Ex) ddwu.npc.seongbaoul
 
 * vmware가 있울 경우, 빌드할 때 작업관리자에서 vmware 관련 프로세스들을 종료해본다.
 * windows10에서 모바일 핫스팟 사용 시 오류가 날 수 있음. 와이파이 이용할 것.
-* ★ (추가) 릴리즈 키파일을 저장한 경로가 띄어쓰기없이 소문자 영어로만 이루어지게끔 하기
+
+* 플레이 스토어 콘솔에 업로드했을때 다음과 같은 오류가 뜬다면, Solar2D 프로그램을 최신 버전으로 다시 다운로드 후, 다시 시도해주세요.
+	![Alt text](../image/supple02/09.png)  
 
 <br>
 
