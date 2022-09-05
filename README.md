@@ -23,7 +23,7 @@
 #### 4️⃣ 부록
 * [스토어 출시용 apk 빌드 방법](./study/supple02.md)
 
-## 🎥 [강의 영상](https://www.youtube.com/playlist?list=PLga3qWRlaoi7n1gggte-CWx3YYsGt4QkK)
+## 🎥 [강의 영상 (Youtube)](https://www.youtube.com/playlist?list=PLga3qWRlaoi7n1gggte-CWx3YYsGt4QkK)
 
 ## 📌 참고 자료
 * 🧡 [Solar2D 개발자 문서](https://docs.coronalabs.com/)
