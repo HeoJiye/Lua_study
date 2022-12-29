@@ -8,8 +8,7 @@
 * [필요한 프로그램 다운로드](study/download.md)
 
 #### 1️⃣ Lua 기초
-* [Lua를 다루는 법](./study/lua_basic01.md): LUA 교과서 프로젝트 中 기본문법 부록 초안
-* [학습 보조 자료 & 과제](./study/lua_basic02.md)
+/* 추후 업데이트 */
 
 #### 2️⃣ Solar2D 기초
 * 1차시: [Lua 기본문법과 display 사용법](./study/week01.md)
