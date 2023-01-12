@@ -334,7 +334,3 @@ onFirstView()	-- invoke first tab button's onPress event manually
 
 * 본인이 작성한 부분만 복사해서 제출하면 됩니다.
 * 꼭 이미지와 동일하지 않아도 display.newCircle 등 함수들을 적절히 사용만 하면 OK!
-
-<br>
-
-#### 📚 [제출 폼 링크](https://forms.gle/o5vQeAWB8rRaGCUg9)
