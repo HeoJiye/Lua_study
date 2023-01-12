@@ -235,5 +235,3 @@ end
 * **concept.json을 이용해서 다음과 같이 concept.lua를 완성해보세요.**
 
 	![Alt text](../image/week04-1/04.gif) 
-
-#### 📚 [제출 폼 링크](https://forms.gle/EuFwMGuM8fAUGBiv8)
