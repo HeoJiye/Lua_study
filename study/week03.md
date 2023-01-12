@@ -482,7 +482,3 @@ end
 * 추가 과제(선택): game.lua에서 배경음악을 추가해보세요!
 	- 조건 1: ending.lua로 넘어갈 때는 배경음악을 멈출 것 or 다른 배경음악을 틀 것
 	- 조건 2: setting.lua가 보여질 때는 배경음악이 그대로 들리게 할 
-
-<br>
-
-#### 📚 [제출 폼 링크](https://forms.gle/YBkNfMRhko5yadhG9)
