@@ -362,7 +362,3 @@ local flag = false
 	- 힌트: timer.perfornWithDelay() 이용한다.
 
 	![Alt text](../image/week04-2/과제.gif) 
-
-<br>
-
-#### 📚 [제출 폼 링크](https://forms.gle/u5eTVrFbBy1kEvBf6)
