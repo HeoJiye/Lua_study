@@ -8,7 +8,7 @@
 * [필요한 프로그램 다운로드](study/download.md)
 
 #### 1️⃣ Lua 기초
-/* 추후 업데이트 */
+* [루아를 다루는 방법.pdf 다운로드](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/Lua%EB%A5%BC%20%EB%8B%A4%EB%A3%A8%EB%8A%94%20%EB%B0%A9%EB%B2%95.pdf)
 
 #### 2️⃣ Solar2D 기초
 * 1차시: [Lua 기본문법과 display 사용법](./study/week01.md)
