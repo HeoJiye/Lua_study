@@ -2,7 +2,8 @@
 
 <br>
 
-### 📗 [Lua 기본문법](./Lua_basic.md)
+### 📗 [Lua 기본문법 (프로그래밍 경험자를 위한 요약본)](./Lua_basic.md)
+### 📗 [Lua를 다루는 방법.pdf (프로그래밍 입문자를 위한 부록)](https://github.com/HeoJiye/Lua_study/raw/main/image/lua_basic/Lua%EB%A5%BC%20%EB%8B%A4%EB%A3%A8%EB%8A%94%20%EB%B0%A9%EB%B2%95.pdf)
 
 <br>
 
@@ -11,7 +12,7 @@
 * [Solar2D Documentation](#-solar2d-documentation) ⬅ 동영상 강의는 여기부터!
 * [실습 준비](#-실습-준비)
 * [Display Object](#-display-object)
-* [간단 실습 따라하기](#%EF%B8%8F%EF%B8%8F-실습-따라하기)
+* [간단 실습 따라하기](#%EF%B8%8F%EF%B8%8F-간단-실습-따라하기)
 * [예제 게임 따라하기](#-예제-게임-따라하기)
 * [이번주 과제 안내](#-이번주-과제-안내)
 
