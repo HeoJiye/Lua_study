@@ -2,6 +2,9 @@
 > ### QnA, 코드 리뷰 게시판을 오픈했습니다!🎉 많은 이용 바랍니다.
 > 💬 [게시판으로 이동하기](https://github.com/HeoJiye/Lua_study/discussions)
 >
+> #### 팀프로젝트를 하시는 개발팀들을 위한 [깃허브 기초 지식.zip](https://github.com/HeoJiye/Github-Study/blob/main/note/github-basic-zip.md)  
+> [깃허브 사용 관련 QnA 게시판](https://github.com/HeoJiye/Github-Study/discussions) (누구나 질문&답변)
+>
 > **이 스터디 자료로 학습하시는 분들은 도움이 되셨다면 깃허브 로그인 후 우측 상단에 🤩`Star 버튼` 한 번씩 눌러주시면 감사하겠습니다!**
 > Star는 즐겨찾기같은 기능이에요~!
 
