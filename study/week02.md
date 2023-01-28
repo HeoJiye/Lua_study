@@ -428,7 +428,8 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 			end
 		```
 
-	- 코드 추가
+	- 코드 추가  
+		(2023-01-28: 코드가 수정되었습니다) 당근을 하나라도 토끼에게 주고 나서 실패 시 오류 수정
 		```lua
 		local function counter( event )
 			time.text = time.text - 1
@@ -445,7 +446,9 @@ timer 이벤트는 앞 tap, touch 이벤트와 사용법이 약간 다름
 					bunny:rotate(90)
 					
 					for i = 1, 5 do
-						carrot[i]:removeEventListener("touch", dragCarrot)
+						if (carrot[i]) then
+							carrot[i]:removeEventListener("touch", dragCarrot)
+						end
 					end
 				end
 			end
