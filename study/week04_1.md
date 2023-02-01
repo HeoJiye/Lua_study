@@ -68,8 +68,7 @@
 				]
 				```
 
-		+ (Tip). json 파일 입출력을 활용해 세이브/로드 기능을 구현할 수도 있다! [관련 QnA](../QnA/02.md)
-		+ [파일 입출력 가이드](https://docs.coronalabs.com/guide/data/readWriteFiles/index.html)
+		+ (Tip). json 파일 입출력을 활용해 세이브/로드 기능을 구현할 수도 있다! [관련 글](https://github.com/HeoJiye/Lua_study/discussions/9)
 
 <br>
 
