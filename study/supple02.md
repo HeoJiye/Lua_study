@@ -1,15 +1,15 @@
 # 스토어 출시용 apk 빌드 방법
 
-### 1️⃣ 디버그용 apk 파일 생성하기 (출시 불가)
+## 1️⃣ 디버그용 apk 파일 생성하기 (출시 불가)
 ![Alt text](../image/supple02/02.png)  
 
 ![Alt text](../image/supple02/01.png)
 
-### 2️⃣ 스토어 출시용 apk 빌드 방법
+## 2️⃣ 스토어 출시용 apk 빌드 방법
 
 
 
-#### 첫번째. android studio를 이용해 release keystore를 생성한다.
+### 첫번째. android studio를 이용해 release keystore를 생성한다.
 
 ![Alt text](../image/supple02/03.png)  
 
@@ -23,7 +23,21 @@
 ![Alt text](../image/supple02/07.png)  
 keystore 파일만 생성되었다면 OK 뒤 단계 할 필요없음
 
-#### 두번째. 생성한 release keystore를 이용해 apk 빌드를 완료한다.
+<br>
+
+### release keystore를 생성하는 또다른 방법
+
+1. 명령 프롬포트(cmd) 실행
+2. cd (keystore 파일 저장할 경로. 저장할 폴더 위에 경로 복붙) 입력
+     ex) cd C:₩key
+3. keytool -genkey -alias (원하는 키 area 이름) -keyalg RSA -validity 10000 -keystore (원하는 keyname).keystore 입력
+4. 필요한 내용 답변 후 생성 완료!
+
+[블로그 글 참고](https://mosei.tistory.com/entry/keystore-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+
+<br>
+
+### 두번째. 생성한 release keystore를 이용해 apk 빌드를 완료한다.
 ![Alt text](../image/supple02/08.png)  
 
 package는 기본 설정에서 되도록 바꾸세요!
