@@ -70,13 +70,15 @@ Solar2D에서 안드로이드 빌드 과정에서 오류가 나는 일을 생각
 3. . keystore의 경로를 바꿔본다. : [관련 포럼](https://forums.solar2d.com/t/resolved-the-password-for-the-keystore-was-not-valid-or-the-key-store-was-not-valid/355084/5)
 	* 다른 드라이브로 변경
 	* 경로에 띄어쓰기 또는 한글이 포함되지 않도록 변경
+	
+4. keystore의 비밀번호를 설정할 때, 특수문자나 공백을 포함하지 않도록 한다. (알파벳 소문자+숫자)
 
-4. 빌드 당시 패키지 명을 수정했는지 확인한다. package를 `ddwu.npc.(게임 고유 이름)`으로 설정한다.
+5. 빌드 당시 패키지 명을 수정했는지 확인한다. package를 `ddwu.npc.(게임 고유 이름)`으로 설정한다.
 	![Alt text](../image/supple02/08.png) 
 	
-5. windows10에서 모바일 핫스팟 아용해서 시도했었다면, 와이파이 이용해서 다시 시도해보기
+6. windows10에서 모바일 핫스팟 아용해서 시도했었다면, 와이파이 이용해서 다시 시도해보기
 
-6. 플레이 스토어 콘솔에 업로드했을때 다음과 같은 오류가 뜬다면, Solar2D 프로그램을 최신 버전으로 다시 다운로드 후, 다시 시도하면 해결됩니다.
+7. 플레이 스토어 콘솔에 업로드했을때 다음과 같은 오류가 뜬다면, Solar2D 프로그램을 최신 버전으로 다시 다운로드 후, 다시 시도하면 해결됩니다.
 	![Alt text](../image/supple02/09.png)  
 
 <br>
