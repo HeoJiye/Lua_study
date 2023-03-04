@@ -51,3 +51,4 @@
 ### ❓ QnA
 * [드래그 함수 관련 오류](QnA/01.md)
 * [세이브/로드 기능을 추가하고 싶어요](https://github.com/HeoJiye/Lua_study/discussions/9)
+* [코드가 너무 더러운 것 같아요](https://github.com/HeoJiye/Lua_study/discussions/26)
